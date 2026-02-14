@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGFI Solutions LLC | Banking Transformation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Smooth scrolling for anchor links */
+        html { scroll-behavior: smooth; }
+
+        /* First Republic Inspired Palette */
+        .bg-frb-green { background-color: #004A32; }
+        .text-frb-green { color: #004A32; }
+        .bg-frb-gold { background-color: #94794C; }
+        .text-frb-gold { color: #94794C; }
+        .bg-frb-eggshell { background-color: #F9F7F2; }
+        .border-frb-green { border-color: #004A32; }
+        .font-serif { font-family: Georgia, serif; }
+
+        /* Modal styling */
+        #contact-modal {
+            display: none;
+            backdrop-filter: blur(4px);
+        }
+    </style>
+</head>
+<body class="bg-frb-eggshell text-gray-800 font-sans">
+
+    <nav class="p-6 flex justify-between items-center border-b border-gray-200 bg-white sticky top-0 z-50">
+        <div class="text-2xl font-bold tracking-tighter text-frb-green">
+            NGFI <span class="text-frb-gold">SOLUTIONS</span>
+        </div>
+        <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-semibold text-frb-green items-center">
+            <a href="#services" class="hover:text-frb-gold transition">Services</a>
+            <a href="#mission" class="hover:text-frb-gold transition">Mission</a>
+            <a href="#leadership-section" class="hover:text-frb-gold transition border-l border-gray-200 pl-8">Who We Are</a>
+            <button onclick="toggleModal()" class="text-white bg-frb-green px-4 py-2 rounded-sm hover:bg-emerald-900 transition font-bold uppercase tracking-widest text-xs">Contact</button>
+        </div>
+    </nav>
+
+    <header class="py-24 px-6 text-center max-w-5xl mx-auto">
+        <h1 class="text-5xl md:text-7xl font-serif mb-6 text-frb-green leading-tight">
+            Strategic Transformation. <br>
+            <span class="text-frb-gold italic">Executed at Scale.</span>
+        </h1>
+        <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto italic font-serif leading-relaxed">
+            NGFI Solutions LLC provides mid-tier banking institutions with the AI-driven architecture and execution support required for the next generation of finance.
+        </p>
+    </header>
+
+    <section id="services" class="py-20 bg-white border-y border-gray-200">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-12 text-center">
+            <div class="p-10 border border-gray-100 bg-frb-eggshell group">
+                <div class="h-14 w-14 bg-frb-green mx-auto mb-6 flex items-center justify-center rounded-full text-white font-bold shadow-md">01</div>
+                <h3 class="text-xl font-bold text-frb-green mb-4">Revenue Growth</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">AI-powered market analysis and customer acquisition tech to scale your profit margins.</p>
+            </div>
+            <div class="p-10 border border-gray-100 bg-frb-eggshell group">
+                <div class="h-14 w-14 bg-frb-green mx-auto mb-6 flex items-center justify-center rounded-full text-white font-bold shadow-md">02</div>
+                <h3 class="text-xl font-bold text-frb-green mb-4">Operational Efficiency</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">Automating core banking workflows to reduce overhead and increase transaction speed.</p>
+            </div>
+            <div class="p-10 border border-gray-100 bg-frb-eggshell group">
+                <div class="h-14 w-14 bg-frb-green mx-auto mb-6 flex items-center justify-center rounded-full text-white font-bold shadow-md">03</div>
+                <h3 class="text-xl font-bold text-frb-green mb-4">Risk & Compliance</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">Ironclad regulatory frameworks backed by predictive AI risk modeling.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="mission" class="py-24 px-6 bg-white">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-16 border-l-2 border-frb-gold pl-8 md:pl-16">
+                <div>
+                    <h2 class="text-frb-gold font-bold uppercase tracking-[0.3em] text-xs mb-4">Our Mission</h2>
+                    <p class="text-2xl font-serif text-frb-green leading-relaxed">
+                        To redefine banking transformation by moving beyond advisory into <span class="italic text-frb-gold">tangible execution</span> through our integrated ecosystem.
+                    </p>
+                </div>
+                <div>
+                    <h2 class="text-frb-gold font-bold uppercase tracking-[0.3em] text-xs mb-4">Our Vision</h2>
+                    <p class="text-gray-600 leading-relaxed font-serif text-lg">
+                        To be the premier partner for financial evolution, where visionary strategy meets functional reality to build the world’s most resilient institutions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="leadership-section" class="py-24 px-6 bg-frb-eggshell border-t border-gray-200">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-frb-gold font-bold uppercase tracking-[0.3em] text-xs mb-4">Leadership</h2>
+                <h3 class="text-4xl font-serif text-frb-green">Founding Partners</h3>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-32 h-32 bg-frb-green rounded-full mb-6 flex items-center justify-center text-white text-3xl font-serif border-4 border-white shadow-lg">JD</div>
+                    <h4 class="text-2xl font-serif text-frb-green">Managing Partner</h4>
+                    <p class="text-frb-gold font-bold uppercase tracking-widest text-xs mb-4">Strategy & Governance</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-32 h-32 bg-frb-green rounded-full mb-6 flex items-center justify-center text-white text-3xl font-serif border-4 border-white shadow-lg">TA</div>
+                    <h4 class="text-2xl font-serif text-frb-green">Technical Partner</h4>
+                    <p class="text-frb-gold font-bold uppercase tracking-widest text-xs mb-4">Architecture & AI</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-16 px-6 text-center bg-frb-green text-white border-t border-frb-gold">
+        <p class="text-xs uppercase tracking-[0.4em] text-frb-gold mb-6 font-bold">The NGFI Execution Ecosystem</p>
+        <div class="flex justify-center space-x-12 mb-10">
+            <span class="text-lg font-bold tracking-tighter">NGFI SOLUTIONS</span>
+            <span class="text-lg font-bold tracking-tighter">SHIMENTO INC.</span>
+        </div>
+        <p class="text-[10px] uppercase tracking-widest text-gray-400">© 2026 NGFI Solutions LLC. All rights reserved.</p>
+    </footer>
+
+    <div id="contact-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 p-4">
+        <div class="bg-frb-eggshell w-full max-w-lg border-t-8 border-frb-green shadow-2xl relative">
+            <button onclick="toggleModal()" class="absolute top-4 right-4 text-gray-400 hover:text-frb-green text-2xl transition-colors">&times;</button>
+            
+            <div class="p-10">
+                <h3 class="text-2xl font-serif text-frb-green mb-1">Institutional Inquiry</h3>
+                <p class="text-[10px] text-frb-gold mb-8 uppercase tracking-[0.2em] font-bold">Connect with our Strategic Partners</p>
+                
+                <form class="space-y-4" onsubmit="event.preventDefault(); alert('Inquiry Sent Successfully.'); toggleModal();">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-[10px] uppercase font-bold text-gray-500 mb-1">First Name</label>
+                            <input type="text" required class="w-full bg-white border border-gray-200 p-3 outline-none focus:border-frb-green text-sm transition">
+                        </div>
+                        <div>
+                            <label class="block text-[10px] uppercase font-bold text-gray-500 mb-1">Last Name</label>
+                            <input type="text" required class="w-full bg-white border border-gray-200 p-3 outline-none focus:border-frb-green text-sm transition">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] uppercase font-bold text-gray-500 mb-1">Company / Institution</label>
+                        <input type="text" required class="w-full bg-white border border-gray-200 p-3 outline-none focus:border-frb-green text-sm transition">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] uppercase font-bold text-gray-500 mb-1">Institutional Email</label>
+                        <input type="email" required class="w-full bg-white border border-gray-200 p-3 outline-none focus:border-frb-green text-sm transition">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] uppercase font-bold text-gray-500 mb-1">Reason for Inquiry</label>
+                        <textarea required rows="4" class="w-full bg-white border border-gray-200 p-3 outline-none focus:border-frb-green text-sm transition" placeholder="Describe your transformation goals..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-frb-green text-white font-bold py-4 uppercase tracking-[0.2em] text-sm hover:bg-emerald-900 transition shadow-lg">Submit Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleModal() {
+            const modal = document.getElementById('contact-modal');
+            if (modal.style.display === 'flex') {
+                modal.style.display = 'none';
+            } else {
+                modal.style.display = 'flex';
+            }
+        }
+
+        // Close modal if user clicks outside of the form
+        window.onclick = function(event) {
+            const modal = document.getElementById('contact-modal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+
+</body>
+</html>
