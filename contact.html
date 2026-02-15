@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | NGFI Solutions LLC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .bg-frb-green { background-color: #004A32; }
+        .text-frb-green { color: #004A32; }
+        .bg-frb-gold { background-color: #94794C; }
+        .text-frb-gold { color: #94794C; }
+        .bg-frb-eggshell { background-color: #F9F7F2; }
+        .font-serif { font-family: Georgia, serif; }
+    </style>
+</head>
+<body class="bg-frb-eggshell text-gray-800 font-sans">
+
+    <nav class="p-6 flex justify-between items-center border-b border-gray-200 bg-white sticky top-0 z-50">
+        <div class="text-2xl font-bold tracking-tighter text-frb-green">
+            <a href="index.html">NGFI <span class="text-frb-gold">SOLUTIONS</span></a>
+        </div>
+        <div class="hidden md:flex space-x-6 text-sm uppercase tracking-widest font-semibold text-frb-green items-center">
+            <a href="index.html#services" class="hover:text-frb-gold transition">Services</a>
+            <a href="index.html#mission" class="hover:text-frb-gold transition">Who We Are</a>
+            <a href="our-approach.html" class="hover:text-frb-gold transition">Our Approach</a>
+            <a href="our-people.html" class="hover:text-frb-gold transition border-l border-gray-200 pl-6">Our People</a>
+            <a href="contact.html" class="text-white bg-frb-green px-4 py-2 rounded-sm font-bold uppercase tracking-widest text-xs">Contact</a>
+        </div>
+    </nav>
+
+    <section class="py-20 bg-white text-center">
+        <h2 class="text-5xl font-serif text-frb-green">Contact Us</h2>
+        <p class="mt-6 text-gray-600 max-w-xl mx-auto italic">Strategic inquiries and institutional partnerships start here.</p>
+    </section>
+
+    <section class="py-12 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-center">
+            <div class="bg-white p-8 border border-gray-100 shadow-sm">
+                <div class="text-frb-gold mb-4 text-2xl">☏</div>
+                <h3 class="text-frb-green font-bold uppercase tracking-widest text-xs mb-2">Phone</h3>
+                <p class="text-gray-600 font-serif">+1 (555) 000-0000</p>
+            </div>
+            <div class="bg-white p-8 border border-gray-100 shadow-sm">
+                <div class="text-frb-gold mb-4 text-2xl">✉</div>
+                <h3 class="text-frb-green font-bold uppercase tracking-widest text-xs mb-2">Email</h3>
+                <p class="text-gray-600 font-serif">info@ngfi-solutions.com</p>
+            </div>
+            <div class="bg-white p-8 border border-gray-100 shadow-sm">
+                <div class="text-frb-gold mb-4 text-2xl">📍</div>
+                <h3 class="text-frb-green font-bold uppercase tracking-widest text-xs mb-2">Office</h3>
+                <p class="text-gray-600 font-serif text-sm">Financial District, New York, NY</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6">
+        <div class="max-w-3xl mx-auto bg-white border-t-8 border-frb-green p-12 shadow-sm">
+            <form class="space-y-6" onsubmit="event.preventDefault(); alert('Message sent.');">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <input type="text" placeholder="First Name" required class="w-full bg-frb-eggshell border border-gray-200 p-4 text-sm outline-none focus:border-frb-green">
+                    <input type="text" placeholder="Last Name" required class="w-full bg-frb-eggshell border border-gray-200 p-4 text-sm outline-none focus:border-frb-green">
+                </div>
+                <input type="email" placeholder="Email Address" required class="w-full bg-frb-eggshell border border-gray-200 p-4 text-sm outline-none focus:border-frb-green">
+                <input type="text" placeholder="Company" required class="w-full bg-frb-eggshell border border-gray-200 p-4 text-sm outline-none focus:border-frb-green">
+                <textarea required rows="6" class="w-full bg-frb-eggshell border border-gray-200 p-4 text-sm outline-none focus:border-frb-green" placeholder="Tell us how we can help..."></textarea>
+                <button type="submit" class="w-full bg-frb-green text-white font-bold py-5 uppercase tracking-[0.3em] text-xs hover:bg-emerald-900 transition shadow-lg">Submit Request</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="py-16 px-6 text-center bg-frb-green text-white border-t border-frb-gold">
+        <p class="text-[10px] uppercase tracking-widest text-gray-400">© 2026 NGFI Solutions LLC.</p>
+    </footer>
+</body>
+</html>
