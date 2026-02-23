@@ -6,134 +6,143 @@
     <title>NGFI Solutions LLC | Banking Transformation</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        html { scroll-behavior: smooth; }
+        html { scroll-behavior: smooth; overflow-x: hidden; }
+        body { overflow-x: hidden; width: 100%; }
         .bg-frb-green { background-color: #004A32; }
         .text-frb-green { color: #004A32; }
         .bg-frb-gold { background-color: #94794C; }
         .text-frb-gold { color: #94794C; }
         .bg-frb-eggshell { background-color: #F9F7F2; }
-        .border-frb-green { border-color: #004A32; }
         .font-serif { font-family: Georgia, serif; }
     </style>
 </head>
-<body class="bg-frb-eggshell text-gray-800 font-sans">
+<body id="home" class="bg-frb-eggshell text-gray-800 font-sans">
 
-    <nav class="p-6 flex justify-between items-center border-b border-gray-200 bg-white sticky top-0 z-50">
-        <div class="text-2xl font-bold tracking-tighter text-frb-green">
-            <a href="index.html">NGFI <span class="text-frb-gold">SOLUTIONS</span></a>
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50 w-full">
+        <div class="max-w-[95%] mx-auto px-4 md:px-6 flex justify-between items-center h-20">
+            <div class="text-xl md:text-2xl font-bold tracking-tighter text-frb-green whitespace-nowrap">
+                <a href="index.html">NGFI <span class="text-frb-gold">SOLUTIONS</span></a>
+            </div>
+            
+            <button id="menu-btn" class="md:hidden text-frb-green p-2 focus:outline-none">
+                <svg id="menu-icon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path id="menu-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+
+            <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-semibold text-frb-green items-center">
+                <a href="#home" class="hover:text-frb-gold transition">Services</a>
+                <a href="who-we-are.html" class="hover:text-frb-gold transition">Who We Are</a>
+                <a href="our-approach.html" class="hover:text-frb-gold transition">Our Approach</a>
+                <a href="our-people.html" class="hover:text-frb-gold transition border-l border-gray-200 pl-8">Our People</a>
+                <a href="contact.html" class="text-white bg-frb-green px-5 py-2.5 rounded-sm hover:bg-emerald-900 transition font-bold uppercase tracking-widest text-[10px]">Contact</a>
+            </div>
         </div>
-        
-        <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-semibold text-frb-green items-center">
-            <a href="#services" class="hover:text-frb-gold transition">Services</a>
-            <a href="#mission" class="hover:text-frb-gold transition">Who We Are</a>
-            <a href="our-approach.html" class="hover:text-frb-gold transition">Our Approach</a>
-            <a href="our-people.html" class="hover:text-frb-gold transition border-l border-gray-200 pl-8">Our People</a>
-            <a href="contact.html" class="text-white bg-frb-green px-5 py-2.5 rounded-sm hover:bg-emerald-900 transition font-bold uppercase tracking-widest text-[10px]">Contact</a>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 w-full shadow-inner">
+            <div class="flex flex-col space-y-4 p-8 text-center uppercase tracking-widest font-semibold text-frb-green">
+                <a href="#home" class="mobile-link py-2">Services</a>
+                <a href="who-we-are.html" class="py-2 border-b border-gray-50">Who We Are</a>
+                <a href="our-approach.html" class="py-2 border-b border-gray-50">Our Approach</a>
+                <a href="our-people.html" class="py-2 border-b border-gray-50">Our People</a>
+                <a href="contact.html" class="text-frb-gold py-2 font-bold">Contact</a>
+            </div>
         </div>
     </nav>
 
-    <header class="py-24 px-6 text-center max-w-5xl mx-auto">
-        <h1 class="text-5xl md:text-7xl font-serif mb-6 text-frb-green leading-tight">
-            Strategic Transformation. <br>
+    <header class="py-16 md:py-24 px-6 text-center max-w-5xl mx-auto">
+        <h1 class="text-4xl md:text-7xl font-serif mb-6 text-frb-green leading-tight">
+            Strategic Transformation. <br class="hidden md:block">
             <span class="text-frb-gold italic">Executed at Scale.</span>
         </h1>
-        <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto italic font-serif leading-relaxed">
-            NGFI Solutions LLC provides mid-tier banking institutions with the AI-driven architecture and execution support required for the next generation of finance.
+        <p class="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto italic font-serif leading-relaxed px-2">
+            NGFI Solutions, LLC provides financial institutions with the AI-driven architecture and execution support required for the next generation of finance.
         </p>
+        <div class="flex justify-center">
+            <a href="who-we-are.html" class="bg-frb-gold text-white px-8 py-3 rounded-sm font-bold uppercase tracking-widest text-xs hover:bg-opacity-90 transition shadow-md">View Capabilities</a>
+        </div>
     </header>
 
-    <section id="services" class="py-20 bg-white border-y border-gray-200 scroll-mt-24">
-        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-12 text-center">
-            <div class="p-10 border border-gray-100 bg-frb-eggshell">
-                <div class="h-14 w-14 bg-frb-green mx-auto mb-6 flex items-center justify-center rounded-full text-white font-bold shadow-md">01</div>
-                <h3 class="text-xl font-bold text-frb-green mb-4">Revenue Growth</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">AI-powered market analysis and customer acquisition tech to scale your profit margins.</p>
-            </div>
-            <div class="p-10 border border-gray-100 bg-frb-eggshell">
-                <div class="h-14 w-14 bg-frb-green mx-auto mb-6 flex items-center justify-center rounded-full text-white font-bold shadow-md">02</div>
-                <h3 class="text-xl font-bold text-frb-green mb-4">Operational Efficiency</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">Automating core banking workflows to reduce overhead and increase transaction speed.</p>
-            </div>
-            <div class="p-10 border border-gray-100 bg-frb-eggshell">
-                <div class="h-14 w-14 bg-frb-green mx-auto mb-6 flex items-center justify-center rounded-full text-white font-bold shadow-md">03</div>
-                <h3 class="text-xl font-bold text-frb-green mb-4">Risk & Compliance</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">Ironclad regulatory frameworks backed by predictive AI risk modeling.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="mission" class="py-24 px-6 bg-white scroll-mt-24">
-        <div class="max-w-5xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-16 border-l-2 border-frb-gold pl-8 md:pl-16">
-                <div>
-                    <h2 class="text-frb-gold font-bold uppercase tracking-[0.3em] text-xs mb-4">Our Mission</h2>
-                    <p class="text-2xl font-serif text-frb-green leading-relaxed">
-                        To redefine banking transformation by moving beyond advisory into <span class="italic text-frb-gold">tangible execution</span> through our integrated ecosystem.
-                    </p>
-                </div>
-                <div>
-                    <h2 class="text-frb-gold font-bold uppercase tracking-[0.3em] text-xs mb-4">Our Vision</h2>
-                    <p class="text-gray-600 leading-relaxed font-serif text-lg">
-                        To be the premier partner for financial evolution, where visionary strategy meets functional reality to build the world’s most resilient institutions.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 px-6 bg-frb-eggshell border-t border-gray-200">
-        <div class="max-w-6xl mx-auto">
+    <section class="py-16 md:py-24 bg-frb-green text-white overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-frb-gold font-bold uppercase tracking-[0.3em] text-xs mb-4">Differentiation</h2>
-                <h3 class="text-4xl font-serif text-frb-green">What makes us stand out</h3>
+                <h2 class="text-frb-gold font-bold uppercase tracking-[0.4em] text-[10px] md:text-xs mb-4">Market Outlook 2030</h2>
+                <h3 class="text-2xl md:text-4xl font-serif">The AI-First Edge</h3>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-12">
-                <div class="bg-white p-10 shadow-sm border-t-4 border-frb-gold">
-                    <h4 class="text-xl font-serif text-frb-green mb-4">We get you</h4>
-                    <p class="text-sm text-gray-600 leading-relaxed mb-4">
-                        We measure success the way you do—based on your results, not our effort. Every project is tailored to your needs, ensuring measurable impact and real value.
-                    </p>
-                    <p class="text-xs font-bold uppercase tracking-widest text-frb-gold italic">
-                        If we don’t deliver on your outcome – you don’t pay us.
-                    </p>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="space-y-6 md:space-y-8">
+                    <div class="bg-white/5 p-6 md:p-8 border-l-2 border-frb-gold">
+                        <p class="text-base md:text-lg font-serif italic text-gray-200 leading-relaxed">
+                            "Most business leaders—57%—now say their competitive advantage will come primarily from the sophistication of their AI models by 2030."
+                        </p>
+                    </div>
+                    <div class="bg-white/5 p-6 md:p-8 border-l-2 border-frb-gold">
+                        <p class="text-base md:text-lg font-serif italic text-gray-200 leading-relaxed">
+                            "The real advantage will come from how organizations design and orchestrate thousands of decentralized AI agents..."
+                        </p>
+                    </div>
                 </div>
 
-                <div class="bg-white p-10 shadow-sm border-t-4 border-frb-gold">
-                    <h4 class="text-xl font-serif text-frb-green mb-4">Speed & Direct Execution</h4>
-                    <p class="text-sm text-gray-600 leading-relaxed">
-                        Working with a true partner should be easy. Unlike traditional firms, we’re bold, hungry, and always looking for faster ways to deliver outcomes. We streamline everything—no unnecessary back-and-forth—just fast decision-making and rapid project ramp-up.
-                    </p>
-                </div>
-
-                <div class="bg-white p-10 shadow-sm border-t-4 border-frb-gold">
-                    <h4 class="text-xl font-serif text-frb-green mb-4">We know our stuff inside & out</h4>
-                    <p class="text-sm text-gray-600 leading-relaxed">
-                        Our team of seasoned experts brings <span class="text-frb-gold font-bold">150+ years</span> of experience across middle-market, start-ups, and hypergrowth disruptors. You work directly with high-caliber professionals who roll up their sleeves and get things done.
-                    </p>
-                </div>
-
-                <div class="bg-white p-10 shadow-sm border-t-4 border-frb-gold">
-                    <h4 class="text-xl font-serif text-frb-green mb-4">Relationships Focused on Success</h4>
-                    <p class="text-sm text-gray-600 leading-relaxed mb-4">
-                        We show up, listen, and deliver results. Over time, trust grows, and if we don’t have the answer, we’ll connect you to someone who does.
-                    </p>
-                    <p class="text-lg font-serif text-frb-green italic">
-                        You + Us <span class="text-frb-gold"><sup>2</sup></span> is exponentially more powerful.
-                    </p>
+                <div class="space-y-6 md:space-y-8">
+                    <div class="bg-white/5 p-6 md:p-8 border-l-2 border-frb-gold">
+                        <p class="text-base md:text-lg font-serif italic text-gray-200 leading-relaxed">
+                            Organizations leaning into AI-first operations anticipate <span class="text-frb-gold font-bold text-xl">70%</span> greater improvement in productivity.
+                        </p>
+                    </div>
+                    <div class="bg-white/5 p-6 md:p-8 border-l-2 border-frb-gold shadow-xl">
+                        <p class="text-lg md:text-xl font-serif italic mb-6 text-white leading-relaxed">
+                            “AI’s future isn’t about bigger models. It’s about smarter integration with people and processes.”
+                        </p>
+                        <div>
+                            <p class="font-bold text-frb-gold uppercase tracking-widest text-sm">Jinesh Dalal</p>
+                            <p class="text-[10px] text-gray-400 uppercase tracking-tighter">Head and VP, Technology Development, C-Metric</p>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white text-center">
+        <div class="max-w-3xl mx-auto px-6">
+            <h3 class="text-xl md:text-2xl font-serif text-frb-green mb-6">Ready to architect your institution's future?</h3>
+            <a href="contact.html" class="inline-block border-2 border-frb-green text-frb-green px-10 py-3 font-bold uppercase tracking-widest text-xs hover:bg-frb-green hover:text-white transition">Get in Touch</a>
         </div>
     </section>
 
     <footer class="py-16 px-6 text-center bg-frb-green text-white border-t border-frb-gold">
         <p class="text-xs uppercase tracking-[0.4em] text-frb-gold mb-6 font-bold">The NGFI Execution Ecosystem</p>
-        <div class="flex justify-center space-x-12 mb-10">
-            <span class="text-lg font-bold tracking-tighter">NGFI LABS</span>
-            <span class="text-lg font-bold tracking-tighter">SHIMENTO INC.</span>
-        </div>
         <p class="text-[10px] uppercase tracking-widest text-gray-400">© 2026 NGFI Solutions LLC. All rights reserved.</p>
     </footer>
+
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const menuPath = document.getElementById('menu-path');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        btn.addEventListener('click', () => {
+            const isHidden = menu.classList.contains('hidden');
+            menu.classList.toggle('hidden');
+            
+            if (isHidden) {
+                // Change to "X" icon
+                menuPath.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+            } else {
+                // Change to Hamburger icon
+                menuPath.setAttribute('d', 'M4 6h16M4 12h16m-7 6h7');
+            }
+        });
+
+        // Close menu when a link is clicked
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                menuPath.setAttribute('d', 'M4 6h16M4 12h16m-7 6h7');
+            });
+        });
+    </script>
 
 </body>
 </html>
